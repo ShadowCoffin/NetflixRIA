@@ -1,0 +1,204 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+h3{
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+	display: none;
+  }
+
+body {
+	background-color: #141414;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body .fondo{
+	background-color: #141414;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.fondo{
+	background-color: #141414;
+}
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+.site-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
+	padding: 20px 40px;
+	background-color: #141414;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+  }
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  	position: sticky;
+	
+}
+
+
+
+header nav a {
+	color: #fff;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #aaa;
+}
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../imagenes/AvengersFondo.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: flex-end;
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .logopeli{
+	font-size: 8px;
+	min-height: 20.62em;
+	max-width: 50em;
+	color: #fff;
+	background-size: contain;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: flex-end;
+}
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+	background: #fff;
+	color: #000;
+}
+
+.pelicula-principal .boton i {
+	margin-right: 1.25em;
+}
+
+.row{
+	background-color: #141414;
+}
+
+.row > div img {
+	width: 300px;
+	height: 150px;
+	cursor: pointer;
+	-webkit-transition: -webkit-transform 500ms;
+	transition: -webkit-transform 500ms;
+	transition: transform 500ms;
+	transition: transform 500ms, -webkit-transform 500ms;
+	border-radius: 3%;
+	background-color: #141414;
+  }
+  
+
+.row > div img:hover {
+	-webkit-transform: scale(1.2);
+			transform: scale(1.2);
+  }
+
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores,
+	.peliculas-recomendadas .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
