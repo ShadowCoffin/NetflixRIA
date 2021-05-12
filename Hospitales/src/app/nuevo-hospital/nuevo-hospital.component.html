@@ -1,0 +1,16 @@
+<p>Crear nuevo Hospital</p>
+
+<form [formGroup]="hospitalForm" (ngSubmit)="onSubmit()">
+    <label>
+        Id:
+        <input type="text" formControlName="id">
+    </label>
+    <label>
+        Nombre:
+        <input type="text" formControlName="nombre">
+    </label>
+
+    <input type="submit" value="Guardar">
+</form>
+
+<p class="error" *ngIf="!hospitalForm.valid">Faltan completar datos</p>
